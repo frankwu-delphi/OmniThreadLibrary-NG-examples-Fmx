@@ -1,0 +1,26 @@
+object frmForEachOutput: TfrmForEachOutput
+  Left = 0
+  Top = 0
+  Caption = 'ForEach output'
+  ClientHeight = 597
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ListBox1: TListBox
+    Align = Center
+    Size.Width = 312.000000000000000000
+    Size.Height = 396.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    DisableFocusEffect = True
+    ItemHeight = 35.000000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 308.000000000000000000
+    Viewport.Height = 392.000000000000000000
+  end
+end
