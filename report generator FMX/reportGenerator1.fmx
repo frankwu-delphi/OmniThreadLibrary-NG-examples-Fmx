@@ -1,0 +1,64 @@
+object frmReportGenerator: TfrmReportGenerator
+  Left = 0
+  Top = 0
+  Caption = 'Report Generator'
+  ClientHeight = 580
+  ClientWidth = 398
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnCloseQuery = FormCloseQuery
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object btnStart: TButton
+    Position.X = 96.000000000000000000
+    Position.Y = 58.000000000000000000
+    Size.Width = 214.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Start'
+    OnClick = btnStartClick
+  end
+  object lbLog: TListBox
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 24.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 345.000000000000000000
+    Size.Height = 426.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    ItemHeight = 35.000000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 341.000000000000000000
+    Viewport.Height = 422.000000000000000000
+  end
+  object btnStop: TButton
+    Enabled = False
+    Position.X = 96.000000000000000000
+    Position.Y = 103.000000000000000000
+    Size.Width = 214.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Stop'
+    OnClick = btnStopClick
+  end
+  object SimulatorTimer: TTimer
+    Enabled = False
+    OnTimer = SimulatorTimerTimer
+    Left = 176
+    Top = 280
+  end
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 398.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+  end
+end
