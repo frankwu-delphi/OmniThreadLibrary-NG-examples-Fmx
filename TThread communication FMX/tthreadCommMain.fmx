@@ -1,0 +1,58 @@
+object frmTThreadComm: TfrmTThreadComm
+  Left = 0
+  Top = 0
+  Caption = 'TThread communication demo'
+  ClientHeight = 584
+  ClientWidth = 365
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object btn: TButton
+    Position.X = 81.000000000000000000
+    Position.Y = 47.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = '42'
+    OnClick = btnClick
+  end
+  object lbLog: TListBox
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.Y = 193.000000000000000000
+    Size.Width = 365.000000000000000000
+    Size.Height = 391.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    ItemHeight = 30.000000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 361.000000000000000000
+    Viewport.Height = 387.000000000000000000
+  end
+  object Button1: TButton
+    Position.X = 79.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Two random queries'
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Position.X = 79.000000000000000000
+    Position.Y = 145.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Two threaded queries'
+    OnClick = Button2Click
+  end
+end
