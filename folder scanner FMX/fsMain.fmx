@@ -1,0 +1,100 @@
+object frmFolderScanner: TfrmFolderScanner
+  Left = 0
+  Top = 0
+  Caption = 'Folder Scanner / Pipeline demo'
+  ClientHeight = 542
+  ClientWidth = 317
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMasterStyle = 0
+  object lblFolder: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Folder:'
+    TabOrder = 5
+  end
+  object lblNumScanners: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 155.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 13.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Parallel scanners:'
+    TabOrder = 6
+  end
+  object inpFolder: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 0
+    Position.X = 8.000000000000000000
+    Position.Y = 69.000000000000000000
+    Size.Width = 284.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object btnSelect: TButton
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 35.000000000000000000
+    Position.Y = 102.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Select'
+    OnClick = btnSelectClick
+  end
+  object btnStart: TButton
+    Action = actStart
+    Anchors = [akLeft, akTop, akRight]
+    ImageIndex = -1
+    Position.X = 35.000000000000000000
+    Position.Y = 180.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object inpNumScanners: TSpinBox
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Cursor = crIBeam
+    Value = 4.000000000000000000
+    Position.X = 168.000000000000000000
+    Position.Y = 150.000000000000000000
+    Size.Width = 87.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object lbLog: TListBox
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.Y = 240.000000000000000000
+    Size.Width = 317.000000000000000000
+    Size.Height = 302.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    DisableFocusEffect = True
+    ItemHeight = 30.000000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 313.000000000000000000
+    Viewport.Height = 298.000000000000000000
+  end
+  object ActionList: TActionList
+    Left = 96
+    Top = 304
+    object actStart: TAction
+      Text = 'Start'
+      OnExecute = actStartExecute
+      OnUpdate = actStartUpdate
+    end
+    object actStop: TAction
+      Text = 'Stop'
+      OnExecute = actStopExecute
+    end
+  end
+end
