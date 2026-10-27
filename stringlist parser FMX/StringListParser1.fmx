@@ -1,0 +1,90 @@
+object frmStringListParser: TfrmStringListParser
+  Left = 0
+  Top = 0
+  Caption = 'StringList Parser'
+  ClientHeight = 562
+  ClientWidth = 329
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object lblInstructions: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 75.000000000000000000
+    Size.Width = 305.000000000000000000
+    Size.Height = 70.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'Enter '#39'!'#39' in the edit above (anywhere in the string) to simulate' +
+      ' cancellation from the task worker'
+    TabOrder = 6
+  end
+  object lbLog: TListBox
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.Y = 312.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 250.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    DisableFocusEffect = True
+    ItemHeight = 30.000000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 325.000000000000000000
+    Viewport.Height = 246.000000000000000000
+  end
+  object inpString: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 1
+    Text = 'DelphiDelphiDelphiDelphi'
+    Position.X = 8.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object btnProcess: TButton
+    Position.X = 57.000000000000000000
+    Position.Y = 143.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Process (Low Level)'
+    OnClick = btnProcessClick
+  end
+  object btnCancelLL: TButton
+    Position.X = 57.000000000000000000
+    Position.Y = 181.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Cancel'
+    OnClick = btnCancelLLClick
+  end
+  object btnProcessHL: TButton
+    Position.X = 57.000000000000000000
+    Position.Y = 229.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Process (High Level)'
+    OnClick = btnProcessHLClick
+  end
+  object btnCancelHL: TButton
+    Position.X = 57.000000000000000000
+    Position.Y = 267.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Cancel'
+    OnClick = btnCancelHLClick
+  end
+end
