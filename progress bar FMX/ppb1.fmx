@@ -1,0 +1,98 @@
+object frmUpdateProgressBar: TfrmUpdateProgressBar
+  Left = 0
+  Top = 0
+  Caption = 'Parallel Progress Bar'
+  ClientHeight = 579
+  ClientWidth = 363
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object pbParallel: TProgressBar
+    Anchors = [akLeft, akTop, akRight]
+    Orientation = Horizontal
+    Position.X = 16.000000000000000000
+    Position.Y = 507.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object btnPPLMessage: TButton
+    Position.X = 80.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'PPL w/ Message'
+    OnClick = btnPPLMessageClick
+  end
+  object btnPPLWithQueue: TButton
+    Position.X = 80.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'PPL w/ Queue'
+    OnClick = btnPPLWithQueueClick
+  end
+  object btnOTLWithMessage: TButton
+    Position.X = 80.000000000000000000
+    Position.Y = 272.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'OTL w/ Message'
+    OnClick = btnOTLWithMessageClick
+  end
+  object btnPPLWithTimer: TButton
+    Position.X = 80.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'PPL w/ Timer'
+    OnClick = btnPPLWithTimerClick
+  end
+  object btnOTLWithTimer: TButton
+    Position.X = 80.000000000000000000
+    Position.Y = 320.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'OTL w/ Timer'
+    OnClick = btnOTLWithTimerClick
+  end
+  object btnPPLAsyncAwait: TButton
+    Position.X = 80.000000000000000000
+    Position.Y = 391.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'PPL Async/Await'
+    OnClick = btnPPLAsyncAwaitClick
+  end
+  object btnTThreadAsyncAwait: TButton
+    Position.X = 80.000000000000000000
+    Position.Y = 439.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'TThread Async/Await'
+    OnClick = btnTThreadAsyncAwaitClick
+  end
+  object tmrUpdateProgress: TTimer
+    Enabled = False
+    OnTimer = tmrUpdateProgressTimer
+    Left = 224
+    Top = 72
+  end
+end
