@@ -1,0 +1,74 @@
+object frmCheckVat: TfrmCheckVat
+  Left = 0
+  Top = 0
+  Caption = 'Check VAT'
+  ClientHeight = 243
+  ClientWidth = 340
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMasterStyle = 0
+  object btnCheckVat: TButton
+    Anchors = [akTop, akRight]
+    Position.X = 247.000000000000000000
+    Position.Y = 30.000000000000000000
+    Size.Width = 75.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Check VAT'
+    OnClick = btnCheckVatClick
+  end
+  object outVatInfo: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 16.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 306.000000000000000000
+    Size.Height = 153.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 302.000000000000000000
+    Viewport.Height = 149.000000000000000000
+  end
+  object inpCC: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Text = 'SI'
+    Position.X = 17.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object inpVat: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 5
+    Text = '52075800'
+    Position.X = 107.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Position.X = 17.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Country Code'
+    TabOrder = 6
+  end
+  object Label2: TLabel
+    Position.X = 107.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 87.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'VAT'
+    TabOrder = 7
+  end
+end
